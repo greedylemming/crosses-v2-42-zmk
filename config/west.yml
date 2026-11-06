@@ -10,5 +10,3 @@ manifest:
     import: config/west.yml
   self:
     path: config
-    modules:
-    - ../scroll-resolution
