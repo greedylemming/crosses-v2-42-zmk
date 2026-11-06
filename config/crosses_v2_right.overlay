@@ -14,7 +14,8 @@
 #define BALL_RIGHT_SPEED_DIV 2
 // Scroll modes divide by 8 on the board; a higher number scrolls slower.
 #define BALL_LEFT_SCROLL_DIV 32
-#define BALL_RIGHT_SCROLL_DIV 32
+#define BALL_RIGHT_SCROLL_DIV 64
+#define RSCROLL 7
 
 &zip_central_ball {
     cursor {
@@ -54,9 +55,9 @@
 
 // Right hand trackball listener configuration
 &trackball_central_listener {
-    // When layer 1 is active, it intercepts the input and applies scroll rules instead
+    // When layer 7 is active, it intercepts the input and applies scroll rules instead
     scroller {
-        layers = <6>; // Links directly to your scroll_layer index
+        layers = <RSCROLL>; // Links directly to your scroll_layer index
         input-processors
             = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
             , <&zip_xy_to_scroll_mapper>

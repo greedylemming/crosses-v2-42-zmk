@@ -204,7 +204,7 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-                &kp TMUX  &kp Q          &kp W         &kp F        &lt MOUSE P   &kp B             &kp J        &kp L          &kp U         &kp Y         &sqt_quot      &kp SV_A_UMLAUT
+                &kp TMUX  &kp Q          &kp W         &kp F        &lt RSCROLL P &kp B             &kp J        &kp L          &kp U         &kp Y         &sqt_quot      &kp SV_A_UMLAUT
                 &none     &hml LSHIFT A  &hml LCTRL R  &hml LALT S  &hml LCMD T   &kp G             &kp M        &hmr RCMD N    &hmr RALT E   &hmr RCTRL I  &hmr RSHIFT O  &kp SV_O_UMLAUT
                 &none     &kp Z          &kp X         &kp C        &kp D         &kp V             &kp K        &kp H          &kp SV_COMMA  &kp SV_DOT    &kp SV_MINUS   &kp SV_A_RING
                                                        &lt SYM ESC  &lt NUM TAB   &kp LSHIFT        &lt NAV RET  &lt NUM SPACE  &lt SYM BSPC
@@ -263,6 +263,16 @@
 
         mouse_layer {
             display-name = "MOUSE";
+            bindings = <
+                &none  &none     &none      &none      &none      &none         &none   &none   &none  &none  &none  &none
+                &none  &mkp MB4  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mkp MB5      &none   &none   &none  &none  &none  &none
+                &none  &none     &none      &none      &none      &none         &none   &none   &none  &none  &none  &none
+                                            &trans     &trans     &trans        &trans  &trans  &trans
+            >;
+        };
+
+        rscroll_layer {
+            display-name = "Right Scroll";
             bindings = <
                 &none  &none     &none      &none      &none      &none         &none   &none   &none  &none  &none  &none
                 &none  &mkp MB4  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mkp MB5      &none   &none   &none  &none  &none  &none
