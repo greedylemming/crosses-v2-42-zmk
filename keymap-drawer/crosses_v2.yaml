@@ -1,17 +1,17 @@
 layout: {zmk_keyboard: crosses_v2, layout_name: gggw_crosses_42_layout}
 layers:
   BASE:
-  - RSCROLL
+  - Ctl+B
   - Q
   - W
   - F
-  - {t: P, h: RSCROLL}
+  - {t: P, h: MOUSE}
   - B
   - J
   - L
   - U
   - Y
-  - Å
+  - {t: '''', s: '"'}
   - Ä
   - {type: none}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
@@ -36,10 +36,10 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - '-'
-  - {t: '''', s: '"'}
+  - Å
   - {t: '$$mdi:keyboard-esc$$', h: SYM}
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
-  - {t: Ctl+B, h: NAV}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-return$$', h: NAV}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   - {t: '$$mdi:backspace$$', h: SYM}
@@ -168,8 +168,8 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
+  - {type: none}
   - {type: held}
-  - {type: held alternate}
   - {type: none}
   - {t: '$$mdi:backspace-reverse$$', h: SYM}
   FUNC:
@@ -211,7 +211,7 @@ layers:
   - {type: none}
   - {type: held}
   - CONFIG
-  - {type: held}
+  - {type: none}
   - {type: held}
   - CONFIG
   - {type: held}
@@ -263,53 +263,10 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: '$$mdi:mouse$$', h: back}
-  - {t: '$$mdi:mouse-right-click$$', h: right}
-  - {t: '$$mdi:mouse$$', h: middle}
-  - {t: '$$mdi:mouse-left-click$$', h: left}
-  - {t: '$$mdi:mouse$$', h: fwd}
-  - {t: '$$mdi:mouse$$', h: back}
-  - {t: '$$mdi:mouse-left-click$$', h: left}
-  - {t: '$$mdi:mouse$$', h: middle}
-  - {t: '$$mdi:mouse-right-click$$', h: right}
-  - {t: '$$mdi:mouse$$', h: fwd}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  RSCROLL:
   - {type: held}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: held alternate}
-  - {type: none}
-  - {type: none}
-  - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -320,11 +277,11 @@ layers:
   - {t: '$$mdi:mouse$$', h: middle}
   - {t: '$$mdi:mouse-left-click$$', h: left}
   - {t: '$$mdi:mouse$$', h: fwd}
-  - {t: '$$mdi:mouse$$', h: back}
-  - {t: '$$mdi:mouse-left-click$$', h: left}
-  - {t: '$$mdi:mouse$$', h: middle}
-  - {t: '$$mdi:mouse-right-click$$', h: right}
-  - {t: '$$mdi:mouse$$', h: fwd}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
