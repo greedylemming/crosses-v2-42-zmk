@@ -1,10 +1,13 @@
 #ifndef ZMK_HID_OVERRIDE_H
 #define ZMK_HID_OVERRIDE_H
 
-/* 1. Import core ZMK framework structs and constants */
+/* 1. Import core ZMK framework structures and constants first */
 #include_next <zmk/hid.h>
 
-/* 2. Overwrite the baseline descriptor layout with 2000 CPI macOS vectors */
+/* 
+ * 2. Overwrite the baseline descriptor layout with 2000 CPI macOS vectors.
+ *    This configures the main high-resolution pointer collection.
+ */
 #ifdef ZMK_HID_REPORT_DESC_POINTING_BASE
 #undef ZMK_HID_REPORT_DESC_POINTING_BASE
 
@@ -48,6 +51,17 @@
         HID_REPORT_COUNT(1), \
         HID_INPUT(HID_DATA_VARIABLE_RELATIVE), \
     HID_END_COLLECTION
+#endif
+
+/*
+ * 3. CRITICAL MAC OS PATCH: Kill the standalone legacy mouse macro.
+ *    ZMK uses this macro to define a traditional wheel mouse. By defining 
+ *    it as completely empty, we prevent ZMK from building the conflicting 
+ *    low-res 589824 scroll interface entirely.
+ */
+#ifdef ZMK_HID_REPORT_DESC_MOUSE
+#undef ZMK_HID_REPORT_DESC_MOUSE
+#define ZMK_HID_REPORT_DESC_MOUSE
 #endif
 
 #endif /* ZMK_HID_OVERRIDE_H */
