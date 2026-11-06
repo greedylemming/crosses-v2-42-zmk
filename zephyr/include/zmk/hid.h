@@ -54,14 +54,19 @@
 #endif
 
 /*
- * 3. CRITICAL MAC OS PATCH: Kill the standalone legacy mouse macro.
- *    ZMK uses this macro to define a traditional wheel mouse. By defining 
- *    it as completely empty, we prevent ZMK from building the conflicting 
- *    low-res 589824 scroll interface entirely.
+ * 3. CRITICAL MAC OS PATCH: Kill both legacy mouse and pointing sub-descriptors.
+ *    By rendering these empty, we eliminate the secondary low-resolution 
+ *    589824 collection completely, forcing macOS to route all scroll inputs 
+ *    exclusively through the 26214400 high-res trackpad stack.
  */
 #ifdef ZMK_HID_REPORT_DESC_MOUSE
 #undef ZMK_HID_REPORT_DESC_MOUSE
 #define ZMK_HID_REPORT_DESC_MOUSE
+#endif
+
+#ifdef ZMK_HID_REPORT_DESC_POINTING
+#undef ZMK_HID_REPORT_DESC_POINTING
+#define ZMK_HID_REPORT_DESC_POINTING
 #endif
 
 #endif /* ZMK_HID_OVERRIDE_H */
