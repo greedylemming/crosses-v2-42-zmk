@@ -1,0 +1,3 @@
+&trackball_peripheral {
+    res-cpi = <2000>; /* Overrides the default 700 to match your hid.h macro */
+};

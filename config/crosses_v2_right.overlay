@@ -13,8 +13,8 @@
 #define BALL_LEFT_SPEED_DIV 2
 #define BALL_RIGHT_SPEED_DIV 2
 // Scroll modes divide by 8 on the board; a higher number scrolls slower.
-#define BALL_LEFT_SCROLL_DIV 32
-#define BALL_RIGHT_SCROLL_DIV 64
+#define BALL_LEFT_SCROLL_DIV 1
+#define BALL_RIGHT_SCROLL_DIV 1
 #define RSCROLL 7
 
 &zip_central_ball {
@@ -64,4 +64,8 @@
             , <&zip_scroll_scaler 1 BALL_RIGHT_SCROLL_DIV>
             , <&zip_report_rate_limit 16>;
     };
+};
+
+&trackball_central {
+    res-cpi = <2000>; /* Overrides the default 700 to match your hid.h macro */
 };
